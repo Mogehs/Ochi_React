@@ -3,7 +3,10 @@ import FeatureMain from "../components/FeatureMain";
 import Navbar from "../components/Navbar";
 import Marquee from "../components/Marquee";
 import Footer from "../components/Footer";
+import Heading from "../components/Heading";
+
 import LocomotiveScroll from "locomotive-scroll";
+
 import { useEffect } from "react";
 
 const Work = () => {
@@ -21,28 +24,27 @@ const Work = () => {
   }, []);
 
   return (
-    <>
+    <div className="w-full min-h-screen bg-zinc-900  text-white">
       <Navbar />
-      <div className="w-full h-[80vh] text-white">
-        <h1 className=" bg- bg-zinc-900 text-[10vw] font-[impact] pt-[10vw] px-[4.7vw] uppercase pb-[5vw] min-h-[30vh] msm:max-md:pt-[15vw]">
-          Work
-        </h1>
+      <h1 className=" font-founder uppercase text-[3.5rem] py-[3rem] px-[1rem]  md:text-[7rem] md:px-[2rem] lg:px-[4rem]  xlg:text-[8rem]  border-b border-b-zinc-800 ">
+        Work
+      </h1>
 
-        <div className="bg-zinc-950 w-full  py-[5vw]  rounded-t-3xl text-white -mt-10">
-          <h1 className="w-[70vw] px-[5vw] text-[3.6vw] ">
-            Purpose driven, strategy-led presentations that people care about.
-          </h1>
-          <div className="pb-[5vw]">
-            <FeatureMain />
-          </div>
-        </div>
-
-        <div className="-mt-[15vw]">
-          <Marquee>Behance &nbsp; Behance &nbsp; </Marquee>
-        </div>
-        <Footer />
+      <div className="bg-[#CDEA68] text-black h-max w-full  md:pl-[2.5rem] md:pr[8rem] rounded-t-2xl -mt-5 ">
+        <Heading>
+          Purpose driven, strategy-led presentations that people care about.
+        </Heading>
       </div>
-    </>
+
+      <div className="bg-zinc-950 rounded-t-2xl -mt-3 min-h-screen">
+        <FeatureMain />
+      </div>
+
+      <div>
+        <Marquee>Behance &nbsp; Behance &nbsp; </Marquee>
+      </div>
+      <Footer />
+    </div>
   );
 };
 

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import EyeBalls from "./EyeBalls";
 
@@ -7,9 +7,6 @@ const Eyes = () => {
   const videoDiv = useRef(null);
   const eyeDiv = useRef(null);
 
-  // Handle rotation of eyes on mouse move
-
-  // Move cursorDiv with the mouse on video hover
   useEffect(() => {
     const handleVideoMouseMove = (e) => {
       gsap.to(cursorDiv.current, {
@@ -58,7 +55,7 @@ const Eyes = () => {
   };
 
   return (
-    <div className="play-sector w-full h-[100vh] overflow-hidden cursor-pointer relative msm:max-md:h-[30vh]">
+    <div className="play-sector w-full  h-[20rem] md:h-[30rem] overflow-hidden cursor-pointer relative msm:max-md:h-[30vh]">
       <div
         ref={eyeDiv}
         onClick={handleImageClick}
@@ -71,7 +68,7 @@ const Eyes = () => {
       <div
         ref={videoDiv}
         onClick={handleVideoClick}
-        className="w-full h-full flex justify-center items-center absolute top-0 scale-0 opacity-0"
+        className="w-full h-full absolute top-0 scale-0 opacity-0"
       >
         <video
           src="https://ochi.design/wp-content/uploads/2022/05/Main-HQ-1.mp4"
@@ -79,6 +76,7 @@ const Eyes = () => {
           loop={true}
           autoPlay={true}
           preload="metadata"
+          className="w-full h-full object-cover"
         ></video>
         <div
           ref={cursorDiv}

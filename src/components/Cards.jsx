@@ -5,14 +5,14 @@ import Card3 from "./Card3";
 
 const Cards = () => {
   return (
-    <div className="w-full h-[70vh]  p-[3.5vw] bg-zinc-950 grid grid-cols-4 justify-items-center  md:max-lg:grid-cols-2 gap-3  msm:max-md:grid-cols-1 msm:max-md:h-screen border-t border-t-zinc-900 relative ">
-      <div className="col-span-2 w-full h-full">
+    <div className="w-full min-h-[20rem]  p-[2rem] bg-zinc-950 grid gap-3 justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative ">
+      <div className="w-full  h-[18rem]  col-span-1 md:col-span-2  ">
         <Card1 />
       </div>
-      <div className="col-span-1 w-full h-full msm:max-md:col-span-2">
+      <div className="w-full h-[18rem] col-span-1  ">
         <Card2 />
       </div>
-      <div className="col-span-1 w-full h-full msm:max-md:col-span-2">
+      <div className="w-full  h-[18rem] col-span-1  ">
         <Card3 />
       </div>
     </div>

@@ -7,19 +7,19 @@ const FeatureMain = ({ limit }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const imageToShow = image.slice(0, limit);
   return (
-    <div className="cards p-[5vw] grid grid-cols-2 gap-x-8 gap-y-14 justify-items-center msm:max-md:grid-cols-1">
+    <div className="font-founder cards p-[3rem] grid gap-5 md:grid-cols-2 gap-y-[1.5rem] justify-items-center items-center grid-cols-1">
       {imageToShow.map((item, idx) => (
         <div
           key={idx}
-          className="card-container cursor-pointer w-[44vw] h-[36vw] overflow-hidden rounded-xl msm:max-md:w-[84vw] msm:max-md:h-[69vw]"
+          className="font-founder card-container cursor-pointer overflow-hidden w-[84vw] h-[69vw] md:w-[44vw] md:h-[37vw] rounded-xl "
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <h1 className="absolute text-[6vw] font-[Impact] uppercase whitespace-nowrap z-10 left-1/2 transform flex -translate-x-1/2 translate-y-[140%] text-[#CDEA68] msm:max-md:translate-y-[340%] overflow-hidden">
+          <h1 className="absolute overflow-hidden text-[6vw] font-founder uppercase whitespace-nowrap z-10 left-1/2 transform flex -translate-x-1/2 md:translate-y-[140%]  translate-y-[340%]  text-[#CDEA68] ">
             {item.name.split("").map((char, charIdx) => (
               <motion.span
-                initial={{ y: 100 }}
-                animate={hoveredIndex === idx ? { y: 0 } : { y: 100 }}
+                initial={{ y: 200 }}
+                animate={hoveredIndex === idx ? { y: 0 } : { y: 200 }}
                 transition={{
                   ease: [0.85, 0, 0.15, 1],
                   delay: charIdx * 0.02,

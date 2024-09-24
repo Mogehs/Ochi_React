@@ -6,7 +6,10 @@ import Eyes from "../components/Eyes";
 import Features from "../components/Features";
 import Cards from "../components/Cards";
 import Footer from "../components/Footer";
+import LandingBottom from "../components/LandingBottom";
+
 import { useEffect } from "react";
+
 import LocomotiveScroll from "locomotive-scroll";
 
 const Home = () => {
@@ -23,24 +26,22 @@ const Home = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen bg-zinc-950 text-white overflow-x-hidden">
+      <div className="w-full min-h-screen bg-zinc-900 text-white overflow-x-hidden">
         <Navbar />
-        <Landing headings={headings} />
-        <div
-          data-scroll
-          data-scroll-section
-          data-scroll-speed="-.1"
-          className="mt-[10vw]"
-        >
+
+        <div data-scroll data-scroll-section data-scroll-speed="-1">
+          <Landing headings={headings} />
+          <LandingBottom />
+        </div>
+
+        <div data-scroll data-scroll-section data-scroll-speed=".09">
           <Marquee>We are ochi &nbsp;</Marquee>
-        </div>
-        <div className="-mt-[3vw]">
           <About />
+          <Eyes />
+          <Features />
+          <Cards />
+          <Footer />
         </div>
-        <Eyes />
-        <Features />
-        <Cards />
-        <Footer />
       </div>
     </>
   );

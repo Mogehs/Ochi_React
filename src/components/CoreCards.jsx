@@ -127,12 +127,12 @@ const CoreCards = () => {
             </div>
           </div>
           <div className="text-zinc-900 flex justify-between align-bottom ">
-            <h3 className="text-[5vw] font-[Impact] leading-none font-bold p-[2vw] ">
+            <h3 className="text-[5vw] font-founder leading-[3.8vw] font-bold pt-[4vw] pl-[2vw] ">
               {card.name}
               <br />
               {card.name2}
             </h3>
-            <h3 className="text-[5vw] font-[Impact] leading-none font-bold pt-[6vw] px-[2vw] ">
+            <h3 className="text-[5vw] font-founder leading-none font-bold pt-[6vw] px-[2vw] ">
               {idx + 1}/4
             </h3>
           </div>

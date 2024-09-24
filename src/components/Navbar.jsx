@@ -87,7 +87,7 @@ const Navbar = () => {
           </div>
         </NavLink>
 
-        <div className="hidden lg:max-2xl:flex lg:max-2xl:gap-8   ">
+        <div className="hidden  lg:flex lg:justify-between lg:items-center lg:gap-10 ">
           {["Services", "Our work", "About us", "Contact us"].map(
             (elem, idx) => (
               <NavLink
@@ -97,23 +97,20 @@ const Navbar = () => {
                   idx === 3 && "ml-36"
                 }  `}
               >
-                <DrawOutlineButton> {elem}</DrawOutlineButton>
+                <DrawOutlineButton font={"font-neue"}>{elem}</DrawOutlineButton>
               </NavLink>
             )
           )}
         </div>
 
-        <div
-          className={`hidden msm:max-lg:inline cursor-pointer`}
-          onClick={handleClick}
-        >
+        <div className={` cursor-pointer lg:hidden`} onClick={handleClick}>
           <AnimatedHamburgerButton />
         </div>
       </div>
 
       <div
         ref={menu}
-        className="fixed menu min-h-screen w-full bg-[#212121] z-50 -top-[130%] "
+        className="fixed menu min-h-screen w-full bg-[#212121] z-50 -top-[160%] "
       >
         <div className=" border-t border-t-zinc-600 mt-[19vw] w-full h-full p-[3vw] font-[Impact] text-[3rem] leading-[4rem]">
           {["Services", "About Us", "Our Work", "Contact Us"].map(
@@ -121,9 +118,11 @@ const Navbar = () => {
               <Link
                 to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
                 key={idx}
-                className="block tracking-[0.1rem] font-bold"
+                className="block tracking-[0.1rem] "
               >
-                <DrawOutlineButton> {item}</DrawOutlineButton>
+                <DrawOutlineButton font={"font - founder"}>
+                  {item}
+                </DrawOutlineButton>
               </Link>
             )
           )}

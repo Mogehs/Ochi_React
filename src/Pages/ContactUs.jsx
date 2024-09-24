@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import Landing from "../components/Landing";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Heading from "../components/Heading";
+import EyeBalls from "../components/EyeBalls";
+
 import { motion } from "framer-motion";
 import LocomotiveScroll from "locomotive-scroll";
 import { useEffect } from "react";
 
 const ContactUs = () => {
+  const [hover, setHover] = useState(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -16,37 +21,30 @@ const ContactUs = () => {
       scroll.destroy();
     };
   }, []);
-  const [hover, setHover] = useState(null);
-  if (hover) {
-    console.log("hoverd");
-  } else {
-    console.log("not hoverd");
-  }
+
   const headings = ["", "Lets Start", " Project Together"];
   return (
-    <div className="w-full min-h-screen overflow-x-hidden">
+    <div className="w-full bg-zinc-950 min-h-screen overflow-x-hidden">
       <Navbar />
-      <div className="text-white bg-zinc-950 pb-[5vw]">
+      <div className="text-white ">
         <Landing headings={headings} />
       </div>
-      <div
-        data-scroll
-        data-scroll-section
-        data-scroll-speed=".01"
-        className="w-full h-[80vh] px-[4vw] py-[5vw] bg-zinc-800 rounded-t-2xl -mt-[10vw] text-white text-[3vw] leading-none font-light "
-      >
-        Hi! My name is Enter your name*___________ and I work with Company name
-        type here*_____________ I’m looking for a partner to help me with Your
-        goal type here* With an idea of having that completed Date*_____________
-        I am hoping to stay around a budget range of Select*_____________
+      <div className="w-full sm:h-[60vh] md:h-[60vh]   bg-zinc-950 rounded-t-2xl -mt-10 text-white font-light ">
+        <Heading>
+          Hi! My name is Enter your name*___________ and I work with Company
+          name type here*_____________ I'm looking for a partner to help me with
+          Your goal type here* With an idea of having that completed
+          Date*_____________ I am hoping to stay around a budget range of
+          Select*_____________
+        </Heading>
       </div>
-      <div className="relative w-full px-[4vw] py-[8vw] bg-[#CDEA68] rounded-t-2xl -mt-[2vw] text-white text-[3vw] leading-none font-light grid grid-cols-1 justify-items-center ">
+      <div className="relative w-full bg-[#CDEA68] rounded-t-2xl -mt-2 font-light grid grid-cols-2 justify-items-center md:grid-cols-1 p-[2rem]  md:p-[3rem] gap-[2rem] md:gap-[1rem] ">
         {["Instagram", "Behance", "Facebook", "Linkedin"].map((item, idx) => (
           <h3
             key={idx}
             onMouseEnter={() => setHover(idx)}
             onMouseLeave={() => setHover(null)}
-            className="uppercase text-zinc-800 p-[1vw] text-[8vw] font-light flex items-center relative top-6 leading-none font-[Impact] cursor-pointer "
+            className="uppercase text-zinc-900   text-[2rem]  md:text-[5rem] leading-[2.2rem] md:leading-[4rem]  flex items-center relative  font-founder cursor-pointer "
           >
             {item.split("").map((char, charIdx) => (
               <motion.span
@@ -65,6 +63,9 @@ const ContactUs = () => {
             ))}
           </h3>
         ))}
+      </div>
+      <div className="w-full h-[60vh] relative bg-[#CDEA68]  rounded-t-2xl -mt-5 ">
+        <EyeBalls></EyeBalls>
       </div>
       <Footer></Footer>
     </div>

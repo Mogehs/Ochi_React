@@ -1,10 +1,10 @@
 import React from "react";
 
-export const DrawOutlineButton = ({ children, ...rest }) => {
+export const DrawOutlineButton = ({ children, font, ...rest }) => {
   return (
     <button
       {...rest}
-      className="group relative py-[1.2px] font-smemibold text-white transition-colors duration-[400ms] "
+      className={`group relative py-[1.2px] ${font} font-light text-white transition-colors duration-[400ms] `}
     >
       <span>{children}</span>
 

@@ -12,13 +12,13 @@ const Button = ({ children }) => {
       transition={{ ease: [0.5, 0, 0.75, 0], duration: 2.3 }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="w-fit rounded-full px-[2vw] py-[1.2vw] flex justify-center items-center gap-x-7 cursor-pointer  "
+      className="font-neue tracking-wide text-lighter w-fit text-[0.8rem] rounded-full  p-[0.9rem] md:text-[0.9rem] md:p-[1rem]  flex justify-center items-center gap-x-[1rem] cursor-pointer  "
     >
       <button className="uppercase">{children}</button>
       <motion.div
         initial={{ scale: 0.5, color: "white", text: "0.1 px" }}
         animate={hover ? { scale: 1.5, color: "black" } : {}}
-        transition={{ ease: "easeInOut", duration: 0.2 }}
+        transition={{ ease: "easeInOut", duration: 0.3 }}
         className=" bg-white rounded-full p-1 text-[8px] rotate-45 "
       >
         <div className="rotate-45">
