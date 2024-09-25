@@ -12,10 +12,19 @@ const Navbar = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
-    tl.current = gsap.timeline({ paused: true }).to(menu.current, {
-      top: "0%",
-      duration: 1,
-    });
+    tl.current = gsap
+      .timeline({ paused: true })
+      .to(menu.current, {
+        top: "0%",
+        duration: 0.8,
+        delay: 0,
+      })
+      .to(".menu-link", {
+        x: 20,
+        stagger: 0.1,
+        duration: 0.7,
+        ease: "power2.in",
+      });
   }, []);
 
   const handleClick = () => {
@@ -50,7 +59,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`z-[999] fixed w-[100vw] py-[1.2vw] px-[4.2vw] text-white flex justify-between items-center transition-transform duration-300 bg-rgba(34, 33, 33, 0.612)  backdrop-blur-[30px] font-bold    ${
+        className={`z-[999] fixed w-[100vw] py-[1.6vw] px-[2vw] text-white flex justify-between items-center transition-transform duration-300 bg-rgba(34, 33, 33, 0.612)  backdrop-blur-[30px] font-bold    ${
           isScrollingDown ? "-translate-y-full" : "translate-y-0"
         }`}
       >
@@ -93,7 +102,7 @@ const Navbar = () => {
               <NavLink
                 to={`/${elem.toLowerCase().replace(/\s+/g, "-")}`}
                 key={idx}
-                className={`  text-white text-[1.3vw]  cursor-pointer  ${
+                className={`text-white text-[1.3vw]  cursor-pointer  ${
                   idx === 3 && "ml-36"
                 }  `}
               >
@@ -110,23 +119,18 @@ const Navbar = () => {
 
       <div
         ref={menu}
-        className="fixed menu min-h-screen w-full bg-[#212121] z-50 -top-[160%] "
+        className="fixed menu h-screen w-full bg-[#212121] z-50 -top-[160%] text-[3.5rem] leading-[2.8rem] px-[0rem] pt-[4rem] "
       >
-        <div className=" border-t border-t-zinc-600 mt-[19vw] w-full h-full p-[3vw] font-[Impact] text-[3rem] leading-[4rem]">
-          {["Services", "About Us", "Our Work", "Contact Us"].map(
-            (item, idx) => (
-              <Link
-                to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                key={idx}
-                className="block tracking-[0.1rem] "
-              >
-                <DrawOutlineButton font={"font - founder"}>
-                  {item}
-                </DrawOutlineButton>
-              </Link>
-            )
-          )}
-        </div>
+        {["Services", "About Us", "Our Work", "Contact Us"].map((item, idx) => (
+          <Link
+            to={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
+            key={idx}
+            className=" menu-link flex  "
+            style={{ opacity: 1 }}
+          >
+            <DrawOutlineButton font={"font-founder"}>{item}</DrawOutlineButton>
+          </Link>
+        ))}
       </div>
     </>
   );

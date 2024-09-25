@@ -1,5 +1,3 @@
-import { FaArrowUpLong } from "react-icons/fa6";
-import { DrawOutlineButton } from "./DrawUnderlineButton";
 import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
@@ -22,7 +20,7 @@ const Landing = ({ headings }) => {
 
   return (
     <div className="w-[100vw] h-[20rem] pt-[7rem] sm:h-[25rem] sm:pt-[8.5rem] md:h-[28rem] md:pt-[9.5rem] lg:h-[30rem]  bg-zinc-900 overflow-hidden  ">
-      <div className="textStructure  w-fit pl-[1rem] sm:pl-[2rem] md:pl-[3rem]  ">
+      <div className="textStructure  w-fit pl-[0.7rem] md:pl-[2rem]   ">
         {headings.map((elems, idx) => (
           <div key={idx} className="masker">
             <div className="w-fit h-fit flex items-center justify-center ">

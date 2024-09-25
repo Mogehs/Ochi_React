@@ -6,9 +6,11 @@ import Eyes from "../components/Eyes";
 import Features from "../components/Features";
 import Cards from "../components/Cards";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 import LandingBottom from "../components/LandingBottom";
 
 import { useEffect } from "react";
+import gsap from "gsap";
 
 import LocomotiveScroll from "locomotive-scroll";
 
@@ -18,6 +20,12 @@ const Home = () => {
 
     const scroll = new LocomotiveScroll();
 
+    // gsap.to(".page", {
+    //   top: "0%",
+    //   delay: 1,
+    //   dureation: 1,
+    // });
+
     return () => {
       scroll.destroy();
     };
@@ -26,7 +34,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="w-full min-h-screen bg-zinc-900 text-white overflow-x-hidden">
+      <div className="page w-full min-h-screen bg-zinc-900 text-white overflow-x-hidden">
         <Navbar />
         <Landing headings={headings} />
         <LandingBottom />

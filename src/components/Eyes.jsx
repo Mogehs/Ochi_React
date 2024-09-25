@@ -77,6 +77,7 @@ const Eyes = () => {
           autoPlay={true}
           preload="metadata"
           className="w-full h-full object-cover"
+          muted={true}
         ></video>
         <div
           ref={cursorDiv}
