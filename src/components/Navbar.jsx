@@ -22,7 +22,7 @@ const Navbar = () => {
       .to(".menu-link", {
         x: 20,
         stagger: 0.1,
-        duration: 0.7,
+        duration: 0.2,
         ease: "power2.in",
       });
   }, []);

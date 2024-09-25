@@ -42,7 +42,7 @@ const Loader = ({ children }) => {
       )
 
       .to(".loader", {
-        top: "-100%",
+        top: "-200%",
         delay: 0.5,
         duration: 1.4,
         ease: "expo.inOut",
@@ -60,7 +60,7 @@ const Loader = ({ children }) => {
 
   return (
     <>
-      <div className="loader w-full h-screen bg-zinc-900 overflow-hidden z-[10000] absolute top-[100%]  ">
+      <div className="loader w-full h-screen bg-zinc-900 overflow-hidden z-[2000] absolute top-[100%]  ">
         <div className="w-full h-screen overflow-hidden absolute font-founder text-white text-[5rem] px-[4rem] py-[10rem]   flex justify-between flex-col md:text-[7rem] md:p-[8rem] ">
           <div className=" overflow-hidden leading-[5.1rem] md:leading-[6rem] md:mt-[3rem]">
             <h1 className="name relative top-[100%]">{children}</h1>
