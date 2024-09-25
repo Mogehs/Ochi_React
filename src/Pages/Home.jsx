@@ -28,20 +28,14 @@ const Home = () => {
     <>
       <div className="w-full min-h-screen bg-zinc-900 text-white overflow-x-hidden">
         <Navbar />
-
-        <div data-scroll data-scroll-section data-scroll-speed="-1">
-          <Landing headings={headings} />
-          <LandingBottom />
-        </div>
-
-        <div data-scroll data-scroll-section data-scroll-speed=".09">
-          <Marquee>We are ochi &nbsp;</Marquee>
-          <About />
-          <Eyes />
-          <Features />
-          <Cards />
-          <Footer />
-        </div>
+        <Landing headings={headings} />
+        <LandingBottom />
+        <Marquee>We are ochi &nbsp;</Marquee>
+        <About />
+        <Eyes />
+        <Features />
+        <Cards />
+        <Footer />
       </div>
     </>
   );
