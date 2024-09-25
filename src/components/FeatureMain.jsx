@@ -15,7 +15,7 @@ const FeatureMain = ({ limit }) => {
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <h1 className="absolute overflow-hidden text-[4rem] md:text-[5rem] font-founder uppercase whitespace-nowrap z-10 left-1/2 transform flex -translate-x-1/2 translate-y-[160%]  md:translate-y-[110%]   text-[#CDEA68] ">
+          <h1 className="absolute overflow-hidden text-[2.3rem] sm:text-[3rem] md:text-[5rem] font-founder uppercase whitespace-nowrap z-10 left-1/2 transform flex -translate-x-1/2 translate-y-[160%]  md:translate-y-[110%]   text-[#CDEA68] ">
             {item.name.split("").map((char, charIdx) => (
               <motion.span
                 initial={{ y: 200 }}
