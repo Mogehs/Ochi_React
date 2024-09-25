@@ -7,7 +7,7 @@ const FeatureMain = ({ limit }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const imageToShow = image.slice(0, limit);
   return (
-    <div className="font-founder cards p-[3rem] grid gap-5 md:grid-cols-2 gap-y-[1.5rem] justify-items-center items-center grid-cols-1">
+    <div className="font-founder cards p-[3rem]  lg:p-[4rem] grid gap-x-3  md:grid-cols-2 md:gap-x-[1rem] gap-y-[1rem] justify-items-center items-center grid-cols-1">
       {imageToShow.map((item, idx) => (
         <div
           key={idx}
@@ -15,7 +15,7 @@ const FeatureMain = ({ limit }) => {
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <h1 className="absolute overflow-hidden text-[6vw] font-founder uppercase whitespace-nowrap z-10 left-1/2 transform flex -translate-x-1/2 md:translate-y-[140%]  translate-y-[340%]  text-[#CDEA68] ">
+          <h1 className="absolute overflow-hidden text-[4rem] md:text-[5rem] font-founder uppercase whitespace-nowrap z-10 left-1/2 transform flex -translate-x-1/2 translate-y-[160%]  md:translate-y-[110%]   text-[#CDEA68] ">
             {item.name.split("").map((char, charIdx) => (
               <motion.span
                 initial={{ y: 200 }}
