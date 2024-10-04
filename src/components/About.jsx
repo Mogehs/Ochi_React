@@ -12,7 +12,7 @@ const About = () => {
       data-scroll
       data-scroll-section
       data-scroll-speed="-.01"
-      className="w-full   bg-[#CDEA68] rounded-t-2xl -mt-4"
+      className="w-full  min-h-screen bg-[#CDEA68] rounded-t-2xl -mt-4"
     >
       <div className="text-black">
         <Heading>
@@ -33,9 +33,9 @@ const About = () => {
           what makes your message clear, convincing, and captivating.
         </span>
       </div>
-      <div className="w-full flex flex-col  gap-[2rem]  md:flex-row md:justify-between  p-[1rem] md:px-[2rem] md:py-[3rem]">
+      <div className="w-full flex flex-col gap-[2rem] md:flex-row md:justify-between start p-[1rem] md:px-[2rem] md:py-[3rem]">
         <div className="flex flex-col gap-2 items-start">
-          <h1 className="font-neue text-zinc-800 text-[2rem] md:text-[2.7rem] leading-[1.5rem] ">
+          <h1 className="font-neue text-zinc-800 text-[2.3rem] md:text-[2.9rem] leading-[1.5rem] ">
             Our approach
           </h1>
           <div
@@ -50,7 +50,7 @@ const About = () => {
           initial={{ scale: 1 }}
           animate={hover ? { scale: 0.9 } : {}}
           transition={{ ease: easeInOut, duration: 1 }}
-          className="image bg-[#b1c957] ml-[1.3rem]  sm:w-[90vw] md:w-[53vw] md:h-[36vw]  rounded-lg overflow-hidden "
+          className="image bg-[#b1c957] sm:w-[90vw] md:w-[53vw] md:h-[36vw]  rounded-lg overflow-hidden "
         >
           <img
             src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-1326x939.jpg"
