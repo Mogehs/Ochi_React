@@ -23,7 +23,7 @@ const LandingBottom = () => {
   }, []);
 
   return (
-    <div className="w-[100vw] h-[10rem] font-neue text-light overflow-hidden  border-t border-zinc-800  flex flex-col gap-3 justify-center px-[1rem] sm:px-[2rem] md:px-[2.5rem] md:flex-row md:justify-between md:pt-[2rem] ">
+    <div className="w-[100vw] h-[10rem] font-neue text-light overflow-hidden  border-t border-zinc-800  flex sm:flex-col sm:gap-3 sm:justify-center sm:px-[2rem] md:px-[2.5rem] md:flex-row md:justify-between md:pt-[2rem] ">
       {["For public and private companies", "From the first pitch to IPO"].map(
         (elem, idx) => (
           <div key={idx} className="font-[Neue Montreal]">

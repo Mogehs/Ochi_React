@@ -7,7 +7,7 @@ const Features = () => {
     navigate("/our-work");
   };
   return (
-    <div className="bg-zinc-950 w-full min-h-screen rounded-t-3xl">
+    <div className="bg-zinc-950 w-full  rounded-t-3xl">
       <h1 className=" font-neue px-[2rem] py-[1.5rem] text-[1.7rem] border-b-[0.1rem] border-zinc-800 rounded-t-3xl">
         Featured projects
       </h1>
