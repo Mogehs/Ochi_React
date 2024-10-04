@@ -85,7 +85,7 @@ const AboutUs = () => {
                   Two principles we stand behind in every part of our work:
                 </Heading>
               </div>
-              <div className="w-full flex flex-col  justify-center items-center md:flex-row md:justify-between md:items-start  px-[3rem] pb-[3rem] gap-[1.5rem] font-neue mt-10">
+              <div className="w-full flex sm:flex-col  sm:justify-center sm:items-center md:flex-row md:justify-between md:items-start  px-[3rem] pb-[3rem] gap-[1.5rem] font-neue mt-10">
                 <div className="w-full">
                   <div className="w-full">
                     <img
